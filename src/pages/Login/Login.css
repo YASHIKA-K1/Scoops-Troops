@@ -1,0 +1,91 @@
+/* Resetting default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fef9f5; /* Light cream background */
+  }
+  
+  /* Styling the login container */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    width: fit-content;
+  }
+  
+  /* Styling the login box */
+  .login-box {
+    background-color: #ffffff; /* White background */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: fit-content;
+    margin-left: 460px;
+    align-items: center;
+  }
+  
+  .login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff857f; /* Pinkish red color */
+  }
+  
+  /* Styling form elements */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #5c5c5c; /* Dark grey color */
+    margin-right: 10px;
+  }
+  
+  input[type='text'],
+  input[type='password'] {
+    padding: 10px;
+    border: 1px solid #e0e0e0; /* Light grey border */
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  input[type='text']:focus,
+  input[type='password']:focus {
+    outline: none;
+    border-color: pink; /* Pinkish red on focus */
+  }
+  
+  button {
+    background-color: pink; /* Pinkish red button */
+    color: black; /* Black text */
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: black; /* Darker pinkish red on hover */
+    color: white; /* White text on hover */
+  }
+  
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .login-box {
+      width: 90%; /* Adjust width for smaller screens */
+      padding: 20px;
+    }
+    

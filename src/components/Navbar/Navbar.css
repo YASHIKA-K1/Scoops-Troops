@@ -1,56 +1,158 @@
 /* General navbar styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  /* Styles for the left section of the navbar */
-  .navbar-left {
-    display: flex;
-    align-items: center;
-    margin-left: 6%;
-  }
-  
-  /* Styles for the logo */
-  .navbar img {
-    height: 120px; /* Adjusted height for better alignment */
-    margin-right: 20px; /* Add space between logo and heading */
-  }
-  
-  /* Styles for the heading */
-  h2 {
-    font-size: 25px;
-    margin: 0; /* Remove default margin */
-  }
-  
-  /* Styles for the navigation links */
-  .navbar-links {
-    display: flex;
-    align-items: center;
-   margin-right: 350px; 
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+/* Styles for the left section of the navbar */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  margin-left: 6%;
+}
+
+/* Styles for the logo */
+.navbar img {
+  height: 80px; /* Adjusted height for better alignment */
+  margin-right: 20px; /* Add space between logo and heading */
+}
+
+/* Styles for the heading */
+h2 {
+  font-size: 25px;
+  margin: 0; /* Remove default margin */
+}
+
+/* Styles for the navigation links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  margin-right: 6%; /* Adjusted for better spacing */
+}
+
+.navbar-links ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links ul li {
+  margin-right: 40px; /* Adjusted spacing between links */
+  cursor: pointer;
+  text-decoration: none;
+  position: relative; /* For dropdown positioning */
+}
+
+.navbar-links ul li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-links ul li a:hover {
+  color: black;
+}
+
+.navbar-links ul li:last-child {
+  margin-right: 0; /* Remove margin from the last link */
+}
+
+/* Styles for dropdown menu */
+.navbar-links ul li:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure dropdown is above other elements */
+  transition: background-color 0.3s;
+}
+
+.dropdown li {
+  white-space: nowrap;
+}
+
+.dropdown li a {
+  padding: 0.5rem 1rem;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Styles for the right section of the navbar */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 10%;
+}
+
+.login-button, .signup-button {
+  padding: 0.5rem 1rem;
+  background-color: pink;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.login-button:hover, .signup-button:hover {
+  background-color: pink;
+  color: black;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .navbar-links ul {
-    display: flex;
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu ul {
     list-style: none;
     padding: 0;
-    margin: 0;
   }
-  
-  .navbar-links ul li {
-    margin-right: 60px; /* Add space between links */
-    cursor: pointer;
+
+  .mobile-menu ul li {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
   }
-  
-  .navbar-links ul li:last-child {
-    margin-right: 0; /* Remove margin from the last link */
+
+  .mobile-menu ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: color 0.3s;
   }
-  
- 
-  
+}
